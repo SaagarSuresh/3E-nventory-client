@@ -1,0 +1,8 @@
+.pagebar{
+    background-color: aquamarine;
+
+    &__container{
+        display: flex;
+        justify-content: space-between;
+    }
+}
