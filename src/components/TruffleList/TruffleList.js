@@ -1,3 +1,4 @@
+import TruffleListItem from "../TruffleListItem/TruffleListItem";
 import "./TruffleList.scss";
 
 export default function TruffleList({truffleList}){
@@ -8,7 +9,10 @@ export default function TruffleList({truffleList}){
         <section className="truffle-list">
             {truffleList.map((truffle)=>{
                 return(
-                    <></>
+                    <TruffleListItem
+                        key={truffle.id}
+                        truffleItem={truffle}
+                    />
                 )
             })}
         </section>

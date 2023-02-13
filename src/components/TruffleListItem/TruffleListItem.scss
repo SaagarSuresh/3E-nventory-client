@@ -1,0 +1,9 @@
+.truffle-list-item{
+
+    display: flex;
+    justify-content: space-between;
+
+    &__item{
+        margin-left: 2rem;
+    }
+}

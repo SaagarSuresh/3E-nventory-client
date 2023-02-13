@@ -1,8 +1,23 @@
+import { useEffect, useState } from "react";
 import Header from "../../components/Header/Header";
 import PageBar from "../../components/PageBar/PageBar";
+import TruffleList from "../../components/TruffleList/TruffleList";
+import axios from "axios";
 import "./StorePage.scss";
 
+
 export default function StorePage(){
+
+    const [inventoryList, setInventoryList] = useState([])
+
+    useEffect(()=>{
+        async function getInventoryList(){
+            const {data} = await axios.get(`http://localhost:8080/store`);
+            console.log(data);
+            setInventoryList(data);
+        }
+        getInventoryList()
+    }, [])
     return(
         <section className="storepage">
             <Header/>
@@ -23,6 +38,7 @@ export default function StorePage(){
                     </span>
                 </section>
             </section>
+            <TruffleList truffleList={inventoryList} />
         </section>
     )
 }
