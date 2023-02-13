@@ -10,4 +10,13 @@
 
 .nav{
     display: flex;
+
+    &__link{
+        text-decoration: none;
+        color: inherit;
+    }
+
+    &__link-text{
+        margin-left: 2rem;
+    }
 }
