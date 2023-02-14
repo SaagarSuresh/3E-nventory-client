@@ -1,0 +1,27 @@
+.form{
+
+    &__input-container{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &__input{
+
+        width: 40%;
+
+        &--left{
+            display: flex;
+            flex-direction: column;
+        }
+
+        &--right{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__buttons-wrapper{
+        display: flex;
+        justify-content: flex-end;
+    }
+}

@@ -69,6 +69,7 @@ export default function AddNewItemPage(){
             </section>
             <section className="add-new-item__form-container">
                 <form className="form" onSubmit={handleOnSubmit} ref={formRef}>
+                    <div className="form__input-container">
                     <div className="form__input--left">
                         <label className="form__label">Truffle Name</label>
                         <select
@@ -86,7 +87,7 @@ export default function AddNewItemPage(){
                                 )
                             })}
                         </select>
-                        <label className="form__label">MINIMUM TRUFFLES IN CONTAINER 
+                        <label className="form__label">MINIMUM TRUFFLES IN CONTAINER</label>
                             <input
                                 type="text"
                                 className="form_input"
@@ -96,10 +97,10 @@ export default function AddNewItemPage(){
                                 onChange={handleMinTruffles}
                                 value={minTruffles}
                             />
-                        </label>
+                        
                     </div>
                     <div className="form__input--right">
-                    <label className="form__label">TRUFFLES IN CONTAINER 
+                    <label className="form__label">TRUFFLES IN CONTAINER </label>
                             <input
                                 type="text"
                                 className="form_input"
@@ -109,8 +110,8 @@ export default function AddNewItemPage(){
                                 onChange={handleCurrentTruffles}
                                 value={currentTruffles}
                             />
-                        </label>
-                        <label className="form__label">TRUFFLES SOLD 
+                        
+                        <label className="form__label">TRUFFLES SOLD </label>
                             <input
                                 type="text"
                                 className="form_input"
@@ -120,12 +121,16 @@ export default function AddNewItemPage(){
                                 onChange={handleSoldTruffles}
                                 value={soldTruffles}
                             />
-                        </label>
+                        
                     </div>
+                    </div>
+                    <div className="form__buttons-wrapper">
                     <button type="button" onClick={() => {
                         navigate(-1);
                     }}>Cancel</button>
                     <button type="submit">Submit</button>
+                    </div>
+                    
                 </form>
             </section>
         </section>
