@@ -25,7 +25,7 @@ export default function StorePage(){
     return(
         <section className="storepage">
             <Header/>
-            {inventoryList[0] && <PageBar storeName={inventoryList[0].store_name} />}
+            {inventoryList[0] && <PageBar storeName={inventoryList[0].store_name} storeId={storeId}/>}
             <section className="truffle-list">
                 <section className="truffle-list__labels-container">
                     <span className="truffle-list__label">
