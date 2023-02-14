@@ -5,11 +5,16 @@ import TruffleList from "../../components/TruffleList/TruffleList";
 import axios from "axios";
 import "./StorePage.scss";
 import { useParams } from "react-router-dom";
+import DeleteInventory from "../../components/DeleteInventory/DeleteInventory";
 
 
 export default function StorePage(){
 
     const [inventoryList, setInventoryList] = useState([]);
+    const [render, setRender] = useState(false);
+    const [currentInventory, setCurrentInventory] = useState("");
+    const [currentInventoryId, setCurrentInventoryId] = useState("");
+    const [renderInventoryList, setRenderInventoryList] = useState(true);
 
     let storeId = useParams().id;
 
@@ -19,11 +24,26 @@ export default function StorePage(){
             const {data} = await axios.get(`http://localhost:8080/store/${storeId}`);
             setInventoryList(data);
         }
-        getInventoryList()
-    }, [storeId])
+
+        if (renderInventoryList) {
+            getInventoryList();
+            setRenderInventoryList(false);
+          }
+        
+          getInventoryList();
+        
+    }, [storeId, renderInventoryList])
     
     return(
         <section className="storepage">
+            {render && (
+            <DeleteInventory
+            setRender={setRender}
+            currentInventory={currentInventory}
+            currentInventoryId={currentInventoryId}
+            setRenderInventoryList={setRenderInventoryList}
+            />
+            )}
             <Header/>
             {inventoryList[0] && <PageBar storeName={inventoryList[0].store_name} storeId={storeId}/>}
             <section className="truffle-list">
@@ -42,7 +62,12 @@ export default function StorePage(){
                     </span>
                 </section>
             </section>
-            <TruffleList truffleList={inventoryList} />
+            <TruffleList 
+            setRender={setRender}
+            setCurrentInventory={setCurrentInventory}
+            setCurrentInventoryId={setCurrentInventoryId}
+            truffleList={inventoryList} 
+            />
         </section>
     )
 }

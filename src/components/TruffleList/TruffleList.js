@@ -1,7 +1,7 @@
 import TruffleListItem from "../TruffleListItem/TruffleListItem";
 import "./TruffleList.scss";
 
-export default function TruffleList({truffleList}){
+export default function TruffleList({truffleList, setRender, setCurrentInventory, setCurrentInventoryId}){
 
     if(!truffleList) return <p>Loading...</p>;
  
@@ -11,6 +11,9 @@ export default function TruffleList({truffleList}){
                 return(
                     <TruffleListItem
                         key={truffle.id}
+                        setRender={setRender}
+                        setCurrentInventory={setCurrentInventory}
+                        setCurrentInventoryId={setCurrentInventoryId}
                         truffleItem={truffle}
                     />
                 )

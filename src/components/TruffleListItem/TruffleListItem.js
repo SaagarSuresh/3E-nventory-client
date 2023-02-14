@@ -3,7 +3,14 @@ import "./TruffleListItem.scss";
 import deleteImg from "../../assets/images/delete_outline-24px.svg"
 import editImg from "../../assets/images/edit-24px.svg"
 
-export default function TruffleListItem({truffleItem}){
+export default function TruffleListItem({truffleItem, setRender, setCurrentInventory, setCurrentInventoryId}){
+
+    function deleteSetter() {
+        setRender(true);
+        setCurrentInventory(truffleItem.truffle_name);
+        setCurrentInventoryId(truffleItem.id);
+      }
+
     return(
         <section className="truffle-list-item">
             <div className="truffle-list-item__container">
@@ -21,7 +28,7 @@ export default function TruffleListItem({truffleItem}){
                 </span>
             </div>
             <div className="truffle-list-item__icon-wrapper">
-                <img src={deleteImg} alt="" className="truffle-list-item__icon" />
+                <img src={deleteImg} alt="" className="truffle-list-item__icon" onClick={deleteSetter} />
                 <Link to={`/editInventory/${truffleItem.id}`} state={truffleItem}>
                 <img src={editImg} alt="" className="truffle-list-item__icon" />
                 </Link>

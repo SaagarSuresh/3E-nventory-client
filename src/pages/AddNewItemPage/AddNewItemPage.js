@@ -43,7 +43,7 @@ export default function AddNewItemPage(){
                 console.log(error, "Error");
             });
             alert("Inventory has been added.")
-            navigate("/");
+            navigate(-1);
     }
 
     const [minTruffles, setMinTruffles] = useState("");
