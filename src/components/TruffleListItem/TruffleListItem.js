@@ -22,7 +22,9 @@ export default function TruffleListItem({truffleItem}){
             </div>
             <div className="truffle-list-item__icon-wrapper">
                 <img src={deleteImg} alt="" className="truffle-list-item__icon" />
+                <Link to={`/editInventory/${truffleItem.id}`} state={truffleItem}>
                 <img src={editImg} alt="" className="truffle-list-item__icon" />
+                </Link>
             </div>
         </section>
     )
