@@ -16,15 +16,15 @@ export default function StorePage(){
     useEffect(()=>{
         async function getInventoryList(){
             const {data} = await axios.get(`http://localhost:8080/store/${storeId}`);
-            console.log(data);
             setInventoryList(data);
         }
         getInventoryList()
-    }, [inventoryList])
+    }, [storeId])
+
     return(
         <section className="storepage">
             <Header/>
-            <PageBar/>
+            <PageBar storeName={inventoryList[0].store_name}/>
             <section className="truffle-list">
                 <section className="truffle-list__labels-container">
                     <span className="truffle-list__label">
