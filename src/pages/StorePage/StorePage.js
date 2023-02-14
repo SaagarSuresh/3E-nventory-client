@@ -4,20 +4,23 @@ import PageBar from "../../components/PageBar/PageBar";
 import TruffleList from "../../components/TruffleList/TruffleList";
 import axios from "axios";
 import "./StorePage.scss";
+import { useParams } from "react-router-dom";
 
 
 export default function StorePage(){
 
-    const [inventoryList, setInventoryList] = useState([])
+    const [inventoryList, setInventoryList] = useState([]);
+
+    let storeId = useParams().id;
 
     useEffect(()=>{
         async function getInventoryList(){
-            const {data} = await axios.get(`http://localhost:8080/store`);
+            const {data} = await axios.get(`http://localhost:8080/store/${storeId}`);
             console.log(data);
             setInventoryList(data);
         }
         getInventoryList()
-    }, [])
+    }, [inventoryList])
     return(
         <section className="storepage">
             <Header/>
