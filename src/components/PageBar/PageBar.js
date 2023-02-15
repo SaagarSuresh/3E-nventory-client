@@ -7,7 +7,7 @@ export default function PageBar({storeName, storeId}){
             <div className="pagebar__container">
                 <h2 className="pagebar__text">{storeName}</h2>
                 <Link to = {`/newInventory/${storeId}`}>
-                <button className="pagebar__button">Add New Item</button>
+                <button className="pagebar__button">Add New Inventory</button>
                 </Link>
             </div>
         </section>

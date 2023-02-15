@@ -1,7 +1,16 @@
+.storepage{
+    background-color: bisque;
+    height: 100vh;
+}
 .truffle-list{
     background-color: bisque;
+    padding: 0 4rem;
+
+    &__labels-container{
+        display: flex;
+    }
 
     &__label{
-        margin-left: 2rem;
+       width: 20%;
     }
 }

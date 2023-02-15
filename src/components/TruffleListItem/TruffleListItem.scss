@@ -3,7 +3,14 @@
     display: flex;
     justify-content: space-between;
 
+    &__container{
+        width: 80%;
+        display: flex;
+        justify-content: space-around;
+    }
+
     &__item{
-        margin-left: 2rem;
+        width: 20%;
+        
     }
 }

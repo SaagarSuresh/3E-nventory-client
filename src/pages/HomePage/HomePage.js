@@ -6,6 +6,7 @@ export default function HomePage(){
         <section className="homepage">
             <Header/>
             <h2>Welcome to 3E-nventory!</h2>
+            <h3>The Easy, Efficient and Elegent Inventory Tracking System!!!</h3>
         </section>
     )
 }

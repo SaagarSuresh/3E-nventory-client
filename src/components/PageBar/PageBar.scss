@@ -1,13 +1,21 @@
 .pagebar{
-    background-color: aquamarine;
+    background-color: #86C7E2;
+    padding: 0 8rem;
 
     &__container{
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
 
     &__button{
 
+        background-color: #A4C1CA;
+        color: #206F91;
+        height: 4rem;
+        width: 16rem;
+        border: none;
+        border-radius: 2rem;
         &:hover{
             cursor: pointer;
         }
