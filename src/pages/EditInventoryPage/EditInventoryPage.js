@@ -64,8 +64,10 @@ export default function EditInventoryPage(){
 
 
     return(
+        <>
+        <Header/>
         <section className="edit-inventory">
-            <Header/>
+            
             <section className="edit-inventory__page-bar">
                 <h2 className="edit-inventory__page-title">Edit Item</h2>
             </section>
@@ -92,7 +94,7 @@ export default function EditInventoryPage(){
                         <label className="form__label">MINIMUM TRUFFLES IN CONTAINER</label>
                             <input
                                 type="text"
-                                className="form_input"
+                                className="form__input"
                                 placeholder="Enter quantity"
                                 name="minTruffles"
                                 id="minTruffles"
@@ -105,7 +107,7 @@ export default function EditInventoryPage(){
                     <label className="form__label">TRUFFLES IN CONTAINER </label>
                             <input
                                 type="text"
-                                className="form_input"
+                                className="form__input"
                                 placeholder="Enter quantity"
                                 name="currentTruffles"
                                 id="currentTruffles"
@@ -116,7 +118,7 @@ export default function EditInventoryPage(){
                         <label className="form__label">TRUFFLES SOLD </label>
                             <input
                                 type="text"
-                                className="form_input"
+                                className="form__input"
                                 placeholder="Enter quantity"
                                 name="soldTruffles"
                                 id="soldTruffles"
@@ -129,12 +131,13 @@ export default function EditInventoryPage(){
                     <div className="form__buttons-wrapper">
                     <button type="button" onClick={() => {
                         navigate(-1);
-                    }}>Cancel</button>
-                    <button type="submit">Edit</button>
+                    }} className="form__button">Cancel</button>
+                    <button type="submit" className="form__button">Edit</button>
                     </div>
                     
                 </form>
             </section>
         </section>
+        </>
     )
 }

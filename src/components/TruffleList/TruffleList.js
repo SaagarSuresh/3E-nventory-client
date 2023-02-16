@@ -6,7 +6,7 @@ export default function TruffleList({truffleList, setRender, setCurrentInventory
     if(!truffleList) return <p>Loading...</p>;
  
     return(
-        <section className="truffle-list">
+        <section className="trufflelist">
             {truffleList.map((truffle)=>{
                 return(
                     <TruffleListItem

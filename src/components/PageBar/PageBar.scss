@@ -1,5 +1,7 @@
+@use "../../styles/partials/variables" as *;
+
 .pagebar{
-    background-color: #86C7E2;
+    background-color: $Secondary-Background-Color;
     padding: 0 8rem;
 
     &__container{
@@ -10,8 +12,8 @@
 
     &__button{
 
-        background-color: #A4C1CA;
-        color: #206F91;
+        background-color: $Tertiary-Background-Color;
+        color: $Primary-Text-Color;
         height: 4rem;
         width: 16rem;
         border: none;

@@ -48,16 +48,16 @@ export default function StorePage(){
             {inventoryList[0] && <PageBar storeName={inventoryList[0].store_name} storeId={storeId}/>}
             <section className="truffle-list">
                 <section className="truffle-list__labels-container">
-                    <span className="truffle-list__label">
+                    <span className="truffle-list__label--1">
                         TRUFFLE NAME
                     </span>
-                    <span className="truffle-list__label">
+                    <span className="truffle-list__label--2">
                         TRUFFLES IN CONTAINER
                     </span>
-                    <span className="truffle-list__label">
+                    <span className="truffle-list__label--3">
                         TRUFFLES SOLD
                     </span>
-                    <span className="truffle-list__label">
+                    <span className="truffle-list__label--4">
                         TRUFFLES TO BE DIPPED
                     </span>
                 </section>

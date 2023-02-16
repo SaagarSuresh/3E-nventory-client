@@ -2,15 +2,29 @@
 
     display: flex;
     justify-content: space-between;
+    height: 8rem;
+    align-items: center;
+    border-bottom: 1px solid;
 
     &__container{
         width: 80%;
         display: flex;
         justify-content: space-around;
+        
     }
 
     &__item{
+        display: flex;
+        justify-content: center;
         width: 20%;
         
+    }
+
+    &__icon-wrapper{
+        margin-right: 2rem;
+    }
+
+    &__icon{
+        margin-right: 2rem;
     }
 }

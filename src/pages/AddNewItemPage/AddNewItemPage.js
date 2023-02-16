@@ -62,8 +62,10 @@ export default function AddNewItemPage(){
 
 
     return(
+        <>
+        <Header/>
         <section className="add-new-item">
-            <Header/>
+            
             <section className="add-new-item__page-bar">
                 <h2 className="add-new-item__page-title">Add New Item</h2>
             </section>
@@ -90,7 +92,7 @@ export default function AddNewItemPage(){
                         <label className="form__label">MINIMUM TRUFFLES IN CONTAINER</label>
                             <input
                                 type="text"
-                                className="form_input"
+                                className="form__input"
                                 placeholder="Enter quantity"
                                 name="minTruffles"
                                 id="minTruffles"
@@ -103,7 +105,7 @@ export default function AddNewItemPage(){
                     <label className="form__label">TRUFFLES IN CONTAINER </label>
                             <input
                                 type="text"
-                                className="form_input"
+                                className="form__input"
                                 placeholder="Enter quantity"
                                 name="currentTruffles"
                                 id="currentTruffles"
@@ -114,7 +116,7 @@ export default function AddNewItemPage(){
                         <label className="form__label">TRUFFLES SOLD </label>
                             <input
                                 type="text"
-                                className="form_input"
+                                className="form__input"
                                 placeholder="Enter quantity"
                                 name="soldTruffles"
                                 id="soldTruffles"
@@ -127,12 +129,13 @@ export default function AddNewItemPage(){
                     <div className="form__buttons-wrapper">
                     <button type="button" onClick={() => {
                         navigate(-1);
-                    }}>Cancel</button>
-                    <button type="submit">Submit</button>
+                    }} className="form__button">Cancel</button>
+                    <button type="submit" className="form__button">Submit</button>
                     </div>
                     
                 </form>
             </section>
         </section>
+        </>
     )
 }
