@@ -41,11 +41,11 @@ export default function DeleteInventory(props){
               {/* <div className="delete-inventory__button" onClick={handleClick}>
                 <Button btnClass={"button__secondary"} btnText={"Cancel"} />
               </div> */}
-              <button className="delete-inventory__button" onClick={handleClick} >Cancel</button>
+              <button className="delete-inventory__button delete-inventory__button--cancel" onClick={handleClick} >Cancel</button>
               {/* <div className="delete-inventory__button" onClick={handleDelete}>
                 <Button btnClass={"button__delete"} btnText={"Delete"} />
               </div> */}
-              <button className="delete-inventory__button" onClick={handleDelete} >Delete</button>
+              <button className="delete-inventory__button delete-inventory__button--delete" onClick={handleDelete} >Delete</button>
             </div>
           </section>
         </div>

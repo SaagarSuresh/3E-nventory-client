@@ -41,9 +41,10 @@
         margin-right: 18rem;
     }
 
-    &__button{
-        background-color: $Tertiary-Background-Color;
-        color: $Primary-Text-Color;
+    &__add-new-button{
+        background-color: $Primary-Text-Color;
+        color: white ;
+        font-size: 2.2rem;
         height: 4rem;
         width: 16rem;
         border: none;
@@ -52,5 +53,9 @@
             cursor: pointer;
         }
         margin-left: 2rem;
+
+        &--cancel{
+            background-color: $Secondary-Text-Color;
+        }
     }
 }

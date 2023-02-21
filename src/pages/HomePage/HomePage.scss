@@ -1,4 +1,8 @@
 .homepage{
     background-color: #86C7E2;
     height: 100vh;
+
+    &__content{
+        padding: 12rem 4rem;
+    }
 }

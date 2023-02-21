@@ -129,8 +129,8 @@ export default function AddNewItemPage(){
                     <div className="form__buttons-wrapper">
                     <button type="button" onClick={() => {
                         navigate(-1);
-                    }} className="form__button">Cancel</button>
-                    <button type="submit" className="form__button">Submit</button>
+                    }} className="form__add-new-button form__add-new-button--cancel">Cancel</button>
+                    <button type="submit" className="form__add-new-button form__add-new-button--submit">Submit</button>
                     </div>
                     
                 </form>

@@ -131,8 +131,8 @@ export default function EditInventoryPage(){
                     <div className="form__buttons-wrapper">
                     <button type="button" onClick={() => {
                         navigate(-1);
-                    }} className="form__button">Cancel</button>
-                    <button type="submit" className="form__button">Edit</button>
+                    }} className="form__button form__button--cancel">Cancel</button>
+                    <button type="submit" className="form__button form__button--edit">Edit</button>
                     </div>
                     
                 </form>
